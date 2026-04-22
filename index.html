@@ -13,12 +13,12 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/*  ANIMATED BACKGROUND  */
+/* LIGHT MODE */
 body {
-    background: linear-gradient(135deg, #4a00e0, #8e2de2, #3a86ff, #4361ee);
+    background: linear-gradient(135deg, #F9F8FE, #9C88D7);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
-    color: white;
+    color: #333;
 }
 
 @keyframes gradientMove {
@@ -27,7 +27,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/*🌙 DARK MODE */
+/* DARK MODE */
 body.dark {
     background: linear-gradient(135deg, #050014, #12002b, #000428);
     color: #e6e6ff;
@@ -38,7 +38,7 @@ body.dark h1,
 body.dark h2 {
     text-shadow: 0 0 10px #7b2cbf,
                  0 0 20px #4361ee,
-                 0 0 10px #8e2de2;
+                 0 0 20px #8e2de2;
 }
 
 /* GLOW IMAGE */
@@ -65,7 +65,7 @@ body.dark nav {
 /* GLOW BUTTON */
 body.dark .hero button {
     box-shadow: 0 0 10px #7b2cbf,
-                0 0 20px #4361ee;
+                0 0 10px #4361ee;
 }
 
 /* NAVBAR */
@@ -73,7 +73,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.3);
     backdrop-filter: blur(10px);
 }
 
@@ -94,23 +94,16 @@ nav ul li {
 }
 
 nav ul li:hover {
-    color: #b517ff;
+    color: #7b2cbf;
 }
 
 /* DARK MODE BUTTON */
 .toggle-btn {
     padding: 6px 12px;
     border-radius: 20px;
-    background: #7b2cbf;
+    background: #B9A5F6;
     cursor: pointer;
     font-size: 13px;
-    transition: 0.3s;
-}
-
-body.dark .toggle-btn {
-    background: #3a0ca3;
-    box-shadow: 0 0 10px #7b2cbf,
-                0 0 25px #4361ee;
 }
 
 /* HERO */
@@ -128,7 +121,7 @@ body.dark .toggle-btn {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #b517ff;
+    border: 4px solid #AFA4CF;
     margin-bottom: 15px;
     animation: float 3s ease-in-out infinite;
 }
@@ -153,8 +146,8 @@ body.dark .toggle-btn {
     margin-top: 20px;
     padding: 12px 25px;
     border: none;
-    background: #7b2cbf;
-    color: white;
+    background: #C2ADFF;
+    color: #333;
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
@@ -162,7 +155,6 @@ body.dark .toggle-btn {
 
 .hero button:hover {
     transform: scale(1.1);
-    background: #5a189a;
 }
 
 /* SECTIONS */
@@ -180,8 +172,8 @@ section {
 }
 
 .card {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0,0,0,0.1);
     padding: 20px;
     border-radius: 15px;
     width: 260px;
@@ -199,7 +191,7 @@ section {
 }
 
 .contact a {
-    color: #ffd369;
+    color: #7B2CBF;
     text-decoration: none;
 }
 
@@ -207,7 +199,7 @@ section {
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.3);
     margin-top: 40px;
 }
 </style>
@@ -217,14 +209,12 @@ footer {
 
 <!-- NAVBAR -->
 <nav>
-    <h1>Lenard Glarce</h1>
     <ul>
         <li>Home</li>
         <li>About</li>
         <li>Skills</li>
         <li>Contact</li>
 
-        <!-- DARK MODE BUTTON -->
         <li>
             <div class="toggle-btn" onclick="toggleDarkMode()">🌙</div>
         </li>
