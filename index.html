@@ -13,12 +13,11 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* LIGHT MODE */
 body {
-    background: linear-gradient(135deg, #F9F8FE, #9C88D7);
+    background: linear-gradient(135deg, #4f86f7, #7aa2ff, #cfe3ff);
     background-size: 400% 400%;
     animation: gradientMove 10s ease infinite;
-    color: #333;
+    color: #1b2a41;
 }
 
 @keyframes gradientMove {
@@ -27,53 +26,49 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* DARK MODE */
 body.dark {
-    background: linear-gradient(135deg, #050014, #12002b, #000428);
-    color: #e6e6ff;
+    background: #000000;
+    color: #ffffff;
 }
 
-/* GLOW TEXT */
 body.dark h1,
-body.dark h2 {
-    text-shadow: 0 0 10px #7b2cbf,
-                 0 0 20px #4361ee,
-                 0 0 20px #8e2de2;
+body.dark h2,
+body.dark p {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0,150,255,0.6),
+                 0 0 12px rgba(0,120,255,0.5),
+                 0 0 20px rgba(0,80,255,0.4);
 }
 
-/* GLOW IMAGE */
 body.dark .profile-img {
-    box-shadow: 0 0 20px #7b2cbf,
-                0 0 20px #4361ee,
-                0 0 20px #8e2de2;
+    box-shadow: 0 0 10px rgba(0,150,255,0.5),
+                0 0 25px rgba(0,120,255,0.4),
+                0 0 40px rgba(0,80,255,0.3);
 }
 
-/* GLOW CARDS */
 body.dark .card {
-    background: rgba(30, 10, 60, 0.85);
-    border: 1px solid #7b2cbf;
-    box-shadow: 0 0 15px #7b2cbf,
-                0 0 25px #4361ee;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(0,150,255,0.4);
+    box-shadow: 0 0 10px rgba(0,120,255,0.3);
 }
 
-/* GLOW NAVBAR */
 body.dark nav {
-    background: rgba(10, 0, 30, 0.8);
-    box-shadow: 0 0 20px #7b2cbf;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px rgba(0,120,255,0.4);
 }
 
-/* GLOW BUTTON */
 body.dark .hero button {
-    box-shadow: 0 0 10px #7b2cbf,
-                0 0 10px #4361ee;
+    background: #000;
+    color: #fff;
+    border: 1px solid rgba(0,150,255,0.5);
+    box-shadow: 0 0 10px rgba(0,120,255,0.4);
 }
 
-/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.35);
     backdrop-filter: blur(10px);
 }
 
@@ -94,19 +89,17 @@ nav ul li {
 }
 
 nav ul li:hover {
-    color: #7b2cbf;
+    color: #3b6edc;
 }
 
-/* DARK MODE BUTTON */
 .toggle-btn {
     padding: 6px 12px;
     border-radius: 20px;
-    background: #B9A5F6;
+    background: #cfe3ff;
     cursor: pointer;
     font-size: 13px;
 }
 
-/* HERO */
 .hero {
     height: 95vh;
     display: flex;
@@ -121,13 +114,13 @@ nav ul li:hover {
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #AFA4CF;
+    border: 4px solid #4f86f7;
     margin-bottom: 15px;
     animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
+    0% { trans:form: translateY(0px); }
     50% { transform: translateY(-12px); }
     100% { transform: translateY(0px); }
 }
@@ -146,8 +139,8 @@ nav ul li:hover {
     margin-top: 20px;
     padding: 12px 25px;
     border: none;
-    background: #C2ADFF;
-    color: #333;
+    background: #4f86f7;
+    color: white;
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
@@ -157,13 +150,11 @@ nav ul li:hover {
     transform: scale(1.1);
 }
 
-/* SECTIONS */
 section {
     padding: 60px 20px;
     text-align: center;
 }
 
-/* CARDS */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -172,8 +163,8 @@ section {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(79,134,247,0.3);
     padding: 20px;
     border-radius: 15px;
     width: 260px;
@@ -185,21 +176,19 @@ section {
     transform: translateY(-10px);
 }
 
-/* CONTACT */
 .contact p {
     margin-top: 10px;
 }
 
 .contact a {
-    color: #7B2CBF;
+    color: #3b6edc;
     text-decoration: none;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.35);
     margin-top: 40px;
 }
 </style>
@@ -207,21 +196,18 @@ footer {
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <ul>
         <li>Home</li>
         <li>About</li>
         <li>Skills</li>
         <li>Contact</li>
-
         <li>
             <div class="toggle-btn" onclick="toggleDarkMode()">🌙</div>
         </li>
     </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
     <div>
         <img src="https://i.imgur.com/QAMDySG.png" class="profile-img">
@@ -232,7 +218,6 @@ footer {
     </div>
 </div>
 
-<!-- ABOUT -->
 <section>
     <h2>About Me</h2>
     <p style="margin-top:10px; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.6;">
@@ -242,7 +227,6 @@ footer {
     </p>
 </section>
 
-<!-- SKILLS -->
 <section>
     <h2>My Skills & Interests</h2>
     <div class="cards" style="margin-top:20px;">
@@ -260,12 +244,11 @@ footer {
         </div>
         <div class="card">
             <h3>Games 🎮</h3>
-            <p>I enjoy playing Mobile Legends, Delta Force and Call of duty</p>
+            <p>I enjoy Mobile Legends, Delta Force and Call of duty</p>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact">
     <h2>Contact Me</h2>
     <p>📞 09150849827</p>
@@ -273,7 +256,6 @@ footer {
     <p>📘 <a href="https://www.facebook.com/lenard.glarce.2025" target="_blank">Facebook Profile</a></p>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2026 Lenard Glarce | All Rights Reserved</p>
 </footer>
